@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCFS Algo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container p-5" style="display: flex; flex-direction: column; align-items: center;">
+        <div style="max-width: 800px; width: 100%;">
+            <form class="border p-3 rounded m-3 shadow">
+                <h1 class="text-center">Add Process</h1>
+                <input class="form-control mb-3" type="number" name="arrivaltime" id="arrivalTime" placeholder="Arrival Time" required>
+                <input class="form-control mb-3" type="number" name="burstTime" id="burstTime" placeholder="Burst Time" required>
+                <input class="btn btn-success mb-3 w-100" type="submit" value="Add Process">
+            </form>
+        
+            <div class="p-3 mb-3 border rounded shadow">
+                <table class="table border">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Process Name</th>
+                            <th>Arrival Time</th>
+                            <th>Burst Time</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="data-source">
+            
+                    </tbody>
+                </table>
+                <button class="execute btn btn-secondary mb-3 w-100">Execute Processes</button>
+            </div>
+
+            <div class="p-3 mb-3 border rounded shadow">
+                <table class="table border">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Process Name</th>
+                            <th>Turn Around Time</th>
+                            <th>Waiting Time</th>
+                            <th>Burst Time</th>
+                        </tr>
+                    </thead>
+                    <tbody class="data-output">
+                        
+                    </tbody>
+                </table>
+            </div>    
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="fcfs.js" defer></script>
+    <script src="index.js" defer></script>
+</body>
+</html>

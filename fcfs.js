@@ -12,21 +12,9 @@ const fcfsAlgo = (processes) => {
     let currentTime = 0;
     currentTime = processes[0].arrivalTime;
 
-    processes.forEach((process /*, index */) => {
+    processes.forEach((process) => {
         process.completionTime = currentTime + process.burstTime;
         currentTime = process.completionTime;
-
-        // if (index == 0) {
-        //     process.completionTime = process.arrivalTime + process.burstTime;
-        // }else{
-        //     if (process.arrivalTime > processes[index - 1].completionTime) {
-        //         process.completionTime = process.arrivalTime + process.burstTime;
-        //     } else {
-        //         process.completionTime = processes[index - 1].completionTime + process.burstTime;
-        //     }  
-        // }
-        
-
         const turnAroundTime = process.completionTime - process.arrivalTime;
         const waitingTime = turnAroundTime - process.burstTime;
         
